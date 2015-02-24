@@ -1,0 +1,32 @@
+<h4 style="text-align: center"> Enter New Job </h4>
+<%= form_tag( jobs_path(@job)) do %>
+<table align="center" width="750px" border=1 cellpadding=4>
+    <tr>
+        <td width="25%"><b>Id:</b></td> <td><%= text_field_tag "id", '', size: 75 %></td>
+    </tr>
+    <tr>
+        <td width="25%"><b>Posted:</b></td> <td> <%= text_field_tag "posted", '', size: 75 %></td>
+    </tr>
+    <tr>
+        <td width="25%"><b>Company:</b></td> <td> <%= text_field_tag "company", '', size: 75 %></td>
+    </tr>
+    <tr>
+        <td width="25%"><b>City:</b></td> <td> <%= text_field_tag "city", '', size: 75 %></td>
+    </tr>
+    <tr>
+        <td width="25%"><b>State:</b></td> <td> <%= text_field_tag "state", '', size: 75 %> </td>
+    </tr>
+    <tr>
+        <td width="25%"><b>Title:</b></td> <td> <%= text_field_tag "title", '', size: 75 %> </td>
+    </tr>
+    <tr>
+        <td width="25%"><b>Body:</b></td> <td> <%= text_field_tag "body", '', size: 75 %> </td>
+    </tr>
+    <tr>
+        <td width="25%"><b>Keywords:</b></td> <td> <%= text_field_tag "keywords", '', size: 75 %></td>
+    </tr>
+    <tr>
+        <td width="25%"><b>Click to Submit:</b></td> <td><%= submit_tag 'Submit' %></td>
+    </tr>
+</table>
+<% end %>

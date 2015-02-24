@@ -1,0 +1,10 @@
+<%= form_tag search_index_path, method: :get do %>
+<table align="center" width="500px" border=1 cellpadding=4>
+    <tr>
+      <td><%= text_field_tag :keywords, params[:keywords], size: 75 %></td>
+    </tr>
+    <tr>
+      <td><%= submit_tag "Search", name: nil %></td>
+    </tr>
+</table>
+<% end %>

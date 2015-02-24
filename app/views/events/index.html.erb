@@ -1,0 +1,14 @@
+<h4 style="text-align: center">Events</h4>
+
+<table align="center" width="750px" border=1 cellpadding=4>
+  <tr>
+    <th>Id</th>
+    <th>Clicks</th>
+  </tr>
+  <% @event_hash.each do |k,v| %>
+  <tr>
+    <td><%= k %></td>
+    <td><%= v %></td>
+  </tr>
+  <% end %>
+</table>

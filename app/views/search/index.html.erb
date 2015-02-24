@@ -1,0 +1,39 @@
+<h4 style="text-align: center">Keywords Search</h4>
+<%= render "search/new" %></br><hr>
+
+<h4 style="text-align: center"><%= link_to "New Search", search_index_path %></h4>
+
+<% if @search_jobs.nil? %>
+<h4 style="text-align: center">No Search Results</h4>
+<% else %>
+<% @search_jobs.each do |job| %>
+<% if job['keywords'].present? %>
+<table align="center" width="750px" border=1 cellpadding=4>
+    <tr>
+        <td width="25%"><b>Id:</b></td> <td><%= job['id'] %></td>
+    </tr>
+    <tr>
+        <td width="25%"><b>Posted:</b></td> <td> <%= job['posted'] %></td>
+    </tr>
+    <tr>
+        <td width="25%"><b>Company:</b></td> <td> <%= job['company'] %></td>
+    </tr>
+    <tr>
+        <td width="25%"><b>City:</b></td> <td> <%= job['city'] %></td>
+    </tr>
+    <tr>
+        <td width="25%"><b>State:</b></td> <td> <%= job['state'] %></td>
+    </tr>
+    <tr>
+        <td width="25%"><b>Title:</b></td> <td> <%= job['title'] %></td>
+    </tr>
+    <tr>
+        <td width="25%"><b>Body:</b></td> <td> <%= job['body'] %></td>
+    </tr>
+    <tr>
+        <td width="25%"><b>Keywords:</b></td> <td> <%= job['keywords'] %></td>
+    </tr></br>
+</table>
+<% end %>
+<% end %>
+<% end %>
